@@ -1,0 +1,59 @@
+Deixei separado para ficar mais facil o entendimento.
+Primeiro deve ser executado os scripts de criação de tabela e em seguida os scripts
+de Seed(Não tive um nome melhor em portugues então foi esse mesmo...)
+A ideia é tentar dar uma base já pronta para o auxilio dos estudos...
+
+Abaixo algumas anotações diversas e talvez sem sentido, deixei aqui apenas para não
+perder o histórico.
+--------------------------------------------------------------------------
+SQL Server
+Criar os scripts na mão
+	Criar tabelas
+	create table blablabla		
+	
+	Criar Relacionamento
+	coluna tipo foreign key refereces tabelapai(campopai)
+	
+	criar trigger
+	create trigger nome on tabela after insert, update, delete as comando
+	listar trigger https://stackoverflow.com/questions/4305691/need-to-list-all-triggers-in-sql-server-database-with-table-name-and-tables-sch
+	
+	alterar identity
+	DBCC CHECKIDENT(tabela,RESEED,valor)
+	
+	Criar Indices
+	unico = create unique index nomeindice on tabela(campo)
+	Sobre os indices os tipos de indices https://www.devmedia.com.br/indices-clusterizados-e-nao-clusterizados-no-sql-server/30288
+	
+	Comandos DML
+	Insert - OK
+	Insert from select - OK
+
+	Update - OK
+	Update com Join - OK
+
+	Delete - OK
+	Delete com Join - OK
+		Usando CTE com row_number() para limpar os duplicados 
+		begin tran;
+		with paises_duplicados (nro, id_pais, sigla)
+		as	(
+			select	nro = row_number() over (partition by sigla order by sigla),
+					id_pais,
+					sigla
+			from	pais			
+			)
+		delete
+		from	pais 
+		where id_pais in (select id_pais from paises_duplicados where nro > 1)
+		--rollback
+		--commit
+		
+		alter column para mudar o default
+		
+
+	
+	Criar database
+	
+	
+	

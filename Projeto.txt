@@ -1,0 +1,16 @@
+Confesso que num primeiro momento eu era reticente quanto a ser "Full-Stack" ou seja, um faz tudo,
+mas não tem jeito, esse é o modo que o mercado tem absorvido os profissionais, então lá vamos nós.
+A ideia desse projeto é tentar reunir os conceitos para ser um Full-stack com uma certa decencia.
+Baseando-se no que tenho visto, decidi criar um pacote de estudos para me auxiliar e prentendo compartilhar
+esse conhecimento. 
+Deixo claro que estou aprendendo, então se você encontrou algo de errado, por favor, me fale 
+(esse é o minimo que você deve fazer)!
+Vou partir do básico do GitHub, em seguida SQL, BackEnd e Front End
+Por hora, estou usando os seguintes marteriais de estudo.
+Tutorial MVC + DDD + Outras paradas do Eduardo Pires : https://www.youtube.com/watch?v=i9Il79a2uBU
+Full stack ASP.NET Core 2.0 + Entity...etc... :https://www.udemy.com/desenvolvimento-aspnet-core-angular/learn/v4/overview
+Com o tempo vou incluindo mais coisas...
+
+OBSERVAÇÃO
+Quanto uma pasta ou um projeto estiver precedido de uma sequencia numerica, significa que é a ordem de
+execução ou a ordem do meu raciocio lógico.

@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notas", "Notas", "{0B9AD1A5-19C6-49AD-8782-486110F771FB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{E7064C06-2091-4F4F-985D-0B4968E91080}"
+	ProjectSection(SolutionItems) = preProject
+		NotasSQL.txt = NotasSQL.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{1131AABE-D6C8-4629-9017-5572A856BDA2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.Tabelas", "01.Tabelas", "{18199824-EB10-485D-8FDF-7BE25EF85FA5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02.Seeds", "02.Seeds", "{7DBEADE2-4137-4090-96B6-100AF8AA81EF}"
+	ProjectSection(SolutionItems) = preProject
+		2.estado.sql = 2.estado.sql
+		3.cidade.sql = 3.cidade.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projeto", "Projeto", "{2845101C-9C4B-4EC4-A25C-15E1C37169CB}"
+	ProjectSection(SolutionItems) = preProject
+		Notas Diversas.txt = Notas Diversas.txt
+		Projeto.txt = Projeto.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E7064C06-2091-4F4F-985D-0B4968E91080} = {0B9AD1A5-19C6-49AD-8782-486110F771FB}
+		{1131AABE-D6C8-4629-9017-5572A856BDA2} = {E7064C06-2091-4F4F-985D-0B4968E91080}
+		{18199824-EB10-485D-8FDF-7BE25EF85FA5} = {1131AABE-D6C8-4629-9017-5572A856BDA2}
+		{7DBEADE2-4137-4090-96B6-100AF8AA81EF} = {1131AABE-D6C8-4629-9017-5572A856BDA2}
+		{2845101C-9C4B-4EC4-A25C-15E1C37169CB} = {0B9AD1A5-19C6-49AD-8782-486110F771FB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7902C213-AE38-4CE0-AD0B-2DB63D271E50}
+	EndGlobalSection
+EndGlobal
