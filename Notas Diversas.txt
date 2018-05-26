@@ -1,1 +1,4 @@
 Lista de Todas as cidades : http://www.asstecnologia.com.br/blog/?p=1496
+Projetos para montar scripts de demais cidades (precisa adaptar para a estrutura do projeto atual)
+https://github.com/chandez/Estados-Cidades-IBGE
+POCO Generator (Esse ai salvou dezenas de horas de trabalho) : https://www.codeproject.com/Articles/892233/POCO-Generator
