@@ -1,0 +1,50 @@
+Confesso que num primeiro momento eu era reticente quanto a ser "Full-Stack" ou seja, um faz tudo,
+mas não tem jeito, esse é o modo que o mercado tem absorvido os profissionais, então lá vamos nós.
+A ideia desse projeto é tentar reunir os conceitos para ser um Full-stack com uma certa decencia.
+Baseando-se no que tenho visto, decidi criar um pacote de estudos para me auxiliar e prentendo
+compartilhar esse conhecimento. 
+Deixo claro que estou aprendendo (apesar de já programar na plataforma .NET a 8 anos, 
+sempre vou me considerar um aprendiz e estar disposto a aprender, SEMPRE!)
+, então se você encontrou algo de errado, por favor, me fale 
+(esse é o minimo que você deve fazer)!
+Vou partir do básico do GitHub, em seguida SQL, BackEnd e Front End
+Por hora, estou usando os seguintes marteriais de estudo.
+Tutorial MVC + DDD + Outras paradas do Eduardo Pires : https://www.youtube.com/watch?v=i9Il79a2uBU
+Full stack ASP.NET Core 2.0 + Entity...etc... :https://www.udemy.com/desenvolvimento-aspnet-core-angular/learn/v4/overview
+Com o tempo vou incluindo mais coisas...
+O projeto é relativamente simples, começou por um cadastro de moradores, depois virou um cadastro de ruas, bairro....
+Ai decidir fazer uma base de pesquisa partindo dessa ideia...
+Abandonei a ideia de fazer um cadastro de moradores e vou deixar como uma base de pesquisa mesmo...
+Eu vou usar como base principal as ruas do bairro onde cresci, Jardim Mutinga, em Osasco/SP...
+Eu queria cadastrar as de Porangaba/SP tbm, mas não encontrei nada e na verdade esses dados 
+já são suficientes para conseguir testar e desenvolver de forma satisfatória...
+Vou deixar alguns links durante o projeto para pesquisa, além dos scripts e informações relevantes!
+Eu vou partir do database first, mesmo sabendo que o mercado tem pedido code-first, mas é que pretendo
+usar o DAPPER e o EF, então nesse momento não vou perder muito tempo com o CF pro Dapper (nem sei se isso existe!)
+Vou deixar o CF do EF para o cadastro dos moradores, assim consigo treinar essa parte
+
+OBSERVAÇÃO
+Quanto uma pasta ou um projeto estiver precedido de uma sequencia numerica, significa que é a ordem de
+execução ou a ordem do meu raciocio lógico.
+
+26/05/18
+Resolvi tranformar esse arquivo em uma espécie de diário, para poder ir registrando a evolução do projeto.
+O que eu escrevi pra cima tbm já seria algo do tipo, mas acabei não registrando datas....
+Bom, eu resolvi deixar os parametros, principalmente de propriedades das classes com o underline na frente
+Por convenção, as propriedades das entidades é uma cópia do banco e aonde até sei, o underline na frente não é uma forma "elegante"
+de se trabalhar, mas por experiencia própria, deixar a identificação por conta de um Case pode gerar transtornos futuros.
+Não existe um padrão (pelo menos que eu saiba), e o VS2017 acaba dizendo que o correto é as propriedades ficarem com UpperCase,
+mas na boa, vou deixar com essa convenção mesmo....
+Já terminei a base de dados (mas preciso criar os scripts de criação de tabelas) e agora criando as classes do dominio.
+Vou me basear inicialmente nos videos do Baltieri, para o backend. É uma série muito legal (https://www.youtube.com/watch?v=3bMsixLpaHA&list=PLTMuY7ptzFISS-rK8alGtUKqco4vrg2B-)
+Nos videos do baltieri, ele implementa as validações através de Exceptions. Eu sinceramente nunca medi o quanto isso é custoso,
+mas eu sei que existe uma outra forma para isso, então irei seguir um outro artigo para implementar as regras de validação (http://blog.tiagopariz.com/c-with-patterns-notification/)
+No artigo, as interfaces, classes, métodos e propriedades são escritos em ingles...Nada contra, mas eu resolvi escrever em portugues.
+Não que eu seja um patriota, anti americano ou coisa do tipo, mas eu creio que dessa forma, vou conseguir fixar melhor o aprendizado, pq depois é só traduzir para ingles novamente.
+O artigo indica para que a notificação seja criada dentro do dominio. Eu acabei optando para deixa-lo num projeto a parte.
+Não sei...vai que seja necessário usar e depois eu precise fazer alguma coisa nele, vou ter que alterar a classe de dominio?
+SRP manda lembranças...Posso estar errado em fazer isso, mas meu feeling diz que por hora, essa é a melhor decisão...
+Também percebi que no projeto você cria classes de erros praticamente identicas, apenas mudando o nível de severidade.
+Espero não ferir o LSP, mas vou criar uma classe abstrata e as outras apenas passando a severidade....
+REalmente há uma complexidade em se definir  ValuesObjects...Como meu dominio é bem simples, não consegui identificar 
+entidades que necessitariam desse tipo...
