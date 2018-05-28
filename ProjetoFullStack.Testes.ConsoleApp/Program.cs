@@ -15,7 +15,7 @@ namespace ProjetoFullStack.Testes.ConsoleApp
             var objCEP = new CEP("06286060");
             if (!objCEP.Notificacao.TemCriticos)
             {
-                var objrua = new rua(1, 1, "Amazonita", objCEP);
+                var objrua = new rua(1, 1, "Amazonita");
                 var teste = objrua.Valido();
             }
             else

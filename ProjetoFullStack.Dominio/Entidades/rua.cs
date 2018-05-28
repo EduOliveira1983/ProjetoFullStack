@@ -1,6 +1,7 @@
 ﻿using ProjetoFullStack.Dominio.ObjetosValor;
 using ProjetoFullStack.Util.Notificacoes.Erros;
 using ProjetoFullStack.Util.Notificacoes.Erros.Niveis;
+using ProjetoFullStack.Util.Resources;
 using System;
 
 namespace ProjetoFullStack.Dominio.Entidades
@@ -11,8 +12,7 @@ namespace ProjetoFullStack.Dominio.Entidades
         public int id_rua { get; private set; }
         public int id_bairro { get; private set; }
         public int id_tipo_logradouro { get; private set; }
-        public string nome { get; private set; }
-        public CEP cep { get; private set; }
+        public string nome { get; private set; }        
         public DateTime data_cadastro { get; private set; }
         #endregion
 
@@ -21,23 +21,21 @@ namespace ProjetoFullStack.Dominio.Entidades
         {
         }
 
-        public rua(int _id_rua, int _id_bairro, int _id_tipo_logradouro, string _nome, CEP _cep, DateTime _data_cadastro)
+        public rua(int _id_rua, int _id_bairro, int _id_tipo_logradouro, string _nome, DateTime _data_cadastro)
         {
             id_rua = _id_rua;
             id_bairro = _id_bairro;
             id_tipo_logradouro = _id_tipo_logradouro;
-            nome = _nome;
-            cep = _cep;
+            nome = _nome;           
             data_cadastro = _data_cadastro;
             Validar();
         }
 
-        public rua(int _id_bairro, int _id_tipo_logradouro, string _nome, CEP _cep)
+        public rua(int _id_bairro, int _id_tipo_logradouro, string _nome)
         {
             id_bairro = _id_bairro;
             id_tipo_logradouro = _id_tipo_logradouro;
-            nome = _nome;
-            cep = _cep;
+            nome = _nome;            
             Validar();
         }
 
@@ -50,8 +48,8 @@ namespace ProjetoFullStack.Dominio.Entidades
         public sealed override void Validar()
         {
             ValidarNome(nome);
-            Falhou(id_bairro == 0, bairro.CodigoBairroVazio);
-
+            Falhou(id_bairro == 0, bairro.IDBairroInvalido);
+            Falhou(id_tipo_logradouro == 0, tipo_logradouro.IDTipoLogradouroInvalido);            
         }
         #endregion
 
@@ -59,13 +57,10 @@ namespace ProjetoFullStack.Dominio.Entidades
 
         #region Erros
 
-        protected static ErroDescricao CodigoRuaVazio = new ErroDescricao("O Código da Rua não pode ser vazio", new Critico());
+        protected static ErroDescricao IDRuaInvalido = new ErroDescricao(Mensagens.Erro_IDRuaInvalido, new Critico());
 
         #endregion
 
-
     }
-
-
 
 }

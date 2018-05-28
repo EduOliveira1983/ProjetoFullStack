@@ -1,5 +1,6 @@
 ﻿using ProjetoFullStack.Util.Notificacoes.Erros;
 using ProjetoFullStack.Util.Notificacoes.Erros.Niveis;
+using ProjetoFullStack.Util.Resources;
 using System;
 
 namespace ProjetoFullStack.Dominio.Entidades
@@ -19,7 +20,7 @@ namespace ProjetoFullStack.Dominio.Entidades
 
         #region Construtores
 
-        public bairro()
+        protected bairro()
         {
         }
 
@@ -49,7 +50,8 @@ namespace ProjetoFullStack.Dominio.Entidades
         public sealed override void Validar()
         {
             ValidarNome(nome);
-            
+            ValidarCodigoIBGE(codigo_ibge, 10);
+            Falhou(id_cidade == 0, cidade.IDCidadeInvalido);
         }
 
         #endregion
@@ -58,7 +60,7 @@ namespace ProjetoFullStack.Dominio.Entidades
 
         #region ErroDescricao
 
-        public static readonly ErroDescricao CodigoBairroVazio = new ErroDescricao("O Código do Bairro não pode ser Vazio", new Critico());
+        public static readonly ErroDescricao IDBairroInvalido = new ErroDescricao(Mensagens.Erro_IDBairroInvalido, new Critico());
 
         #endregion
 

@@ -1,5 +1,6 @@
 ﻿using ProjetoFullStack.Util.Notificacoes.Erros;
 using ProjetoFullStack.Util.Notificacoes.Erros.Niveis;
+using ProjetoFullStack.Util.Resources;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -39,13 +40,19 @@ namespace ProjetoFullStack.Dominio.Entidades
         {
             Falhou(string.IsNullOrEmpty(_descricao), DescricaoInvalida);
         }
+
+        protected void ValidarCodigoIBGE(string _codigo_ibge, int tamanho)
+        {
+            Falhou(!string.IsNullOrEmpty(_codigo_ibge) & _codigo_ibge.Length != tamanho, CodigoIBGEInvalido);
+        }
         #endregion
 
         #region "Erros"
 
-        protected static ErroDescricao NomeInvalido = new ErroDescricao("Nome Inválido", new Critico());
-        protected static ErroDescricao DescricaoInvalida = new ErroDescricao("Descrição Inválida", new Critico());
-        
+        protected static ErroDescricao NomeInvalido = new ErroDescricao(Mensagens.Erro_NomeInvalido, new Critico());
+        protected static ErroDescricao DescricaoInvalida = new ErroDescricao(Mensagens.Erro_DescricaoInvalida, new Critico());
+        protected static ErroDescricao CodigoIBGEInvalido = new ErroDescricao(Mensagens.Erro_CodigoIBGEInvalido, new Critico());
+
 
         #endregion
     }

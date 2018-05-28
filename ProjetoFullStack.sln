@@ -13,6 +13,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{1131AABE-D6C8-4629-9017-5572A856BDA2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.Tabelas", "01.Tabelas", "{18199824-EB10-485D-8FDF-7BE25EF85FA5}"
+	ProjectSection(SolutionItems) = preProject
+		rua_cep.sql = rua_cep.sql
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02.Seeds", "02.Seeds", "{7DBEADE2-4137-4090-96B6-100AF8AA81EF}"
 	ProjectSection(SolutionItems) = preProject
@@ -36,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoFullStack.Util.Notif
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoFullStack.Testes.ConsoleApp", "ProjetoFullStack.Testes.ConsoleApp\ProjetoFullStack.Testes.ConsoleApp.csproj", "{A985D583-4F16-4097-861D-A7E08494A182}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoFullStack.Util", "ProjetoFullStack.Util\ProjetoFullStack.Util.csproj", "{DF601B14-D0B7-46F6-B0A2-DDA8BA17AFE8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,6 +59,10 @@ Global
 		{A985D583-4F16-4097-861D-A7E08494A182}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A985D583-4F16-4097-861D-A7E08494A182}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A985D583-4F16-4097-861D-A7E08494A182}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF601B14-D0B7-46F6-B0A2-DDA8BA17AFE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF601B14-D0B7-46F6-B0A2-DDA8BA17AFE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF601B14-D0B7-46F6-B0A2-DDA8BA17AFE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF601B14-D0B7-46F6-B0A2-DDA8BA17AFE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,5 +1,6 @@
 ﻿using ProjetoFullStack.Util.Notificacoes.Erros;
 using ProjetoFullStack.Util.Notificacoes.Erros.Niveis;
+using ProjetoFullStack.Util.Resources;
 
 namespace ProjetoFullStack.Dominio.ObjetosValor
 {
@@ -10,6 +11,10 @@ namespace ProjetoFullStack.Dominio.ObjetosValor
         #endregion
 
         #region Construtor
+        protected CEP()
+        {
+        }
+
         public CEP(string _CodigoPostal)
         {
             CodigoPostal = _CodigoPostal;
@@ -30,8 +35,9 @@ namespace ProjetoFullStack.Dominio.ObjetosValor
         #endregion
 
         #region ErrosDescricao
-        protected static ErroDescricao CEPInvalido = new ErroDescricao("CEP Inválido", new Critico());
-        protected static ErroDescricao CEPSomenteNumeros = new ErroDescricao("O CEP deve conter somente números", new Critico());
+        public static readonly ErroDescricao CEPInvalido = new ErroDescricao(Mensagens.Erro_CEPInvalido, new Critico());
+        public static readonly ErroDescricao CEPSomenteNumeros = new ErroDescricao(Mensagens.Erro_CEPSomenteNumeros, new Critico());
+
         #endregion
     }
 }

@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ProjetoFullStack.Util.Notificacoes\ProjetoFullStack.Util.Notificacoes.csproj" />
+    <ProjectReference Include="..\ProjetoFullStack.Util\ProjetoFullStack.Util.csproj" />
   </ItemGroup>
 
 </Project>

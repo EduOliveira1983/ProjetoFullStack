@@ -1,16 +1,22 @@
-﻿using System;
+﻿using ProjetoFullStack.Util.Notificacoes.Erros;
+using ProjetoFullStack.Util.Notificacoes.Erros.Niveis;
+using ProjetoFullStack.Util.Resources;
+using System;
 
 namespace ProjetoFullStack.Dominio.Entidades
 {
-    public class cidade
+    public class cidade :EntidadeBase
     {
+        #region Propriedades
         public int id_cidade { get; private set; }
         public string nome { get; private set; }
         public string codigo_ibge { get; private set; }
         public int id_estado { get; private set; }
         public DateTime data_cadastro { get; private set; }
+        #endregion
 
-        public cidade()
+        #region Construtores
+        protected cidade()
         {
         }
 
@@ -29,8 +35,26 @@ namespace ProjetoFullStack.Dominio.Entidades
             codigo_ibge = _codigo_ibge;
             id_estado = _id_estado;
         }
+        #endregion
 
-        
+        #region Metodos
+
+        #region Validacao
+
+        public override void Validar()
+        {
+            ValidarNome(nome);
+            ValidarCodigoIBGE(codigo_ibge, 7);
+            Falhou(id_estado == 0, estado.IDEstadoInvalido);
+        }
+
+        #endregion
+
+        #endregion
+
+        #region Erros
+        public static readonly ErroDescricao IDCidadeInvalido = new ErroDescricao(Mensagens.Erro_IDCidadeInvalido, new Critico());
+        #endregion
     }
 
 }
