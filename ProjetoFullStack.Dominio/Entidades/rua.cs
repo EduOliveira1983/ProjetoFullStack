@@ -12,7 +12,7 @@ namespace ProjetoFullStack.Dominio.Entidades
         public int id_rua { get; private set; }
         public int id_bairro { get; private set; }
         public int id_tipo_logradouro { get; private set; }
-        public string nome { get; private set; }        
+        public string nome { get; private set; }
         public DateTime data_cadastro { get; private set; }
         #endregion
 
@@ -26,7 +26,7 @@ namespace ProjetoFullStack.Dominio.Entidades
             id_rua = _id_rua;
             id_bairro = _id_bairro;
             id_tipo_logradouro = _id_tipo_logradouro;
-            nome = _nome;           
+            nome = _nome;
             data_cadastro = _data_cadastro;
             Validar();
         }
@@ -35,13 +35,31 @@ namespace ProjetoFullStack.Dominio.Entidades
         {
             id_bairro = _id_bairro;
             id_tipo_logradouro = _id_tipo_logradouro;
-            nome = _nome;            
+            nome = _nome;
             Validar();
         }
 
         #endregion
 
         #region "Metodos"
+
+        public void AlterarBairro(int _id_bairro)
+        {
+            id_bairro = id_bairro;
+            Falhou(id_bairro == 0, bairro.IDBairroInvalido);
+        }
+
+        public void AlterarTipoLogradouro(int _id_tipo_logradouro)
+        {
+            id_tipo_logradouro = _id_tipo_logradouro;
+            Falhou(id_tipo_logradouro == 0, tipo_logradouro.IDTipoLogradouroInvalido);
+        }
+
+        public void AlterarNome(string _nome)
+        {
+            nome = _nome;
+            ValidarNome(nome);
+        }
 
         #region Validacao
 

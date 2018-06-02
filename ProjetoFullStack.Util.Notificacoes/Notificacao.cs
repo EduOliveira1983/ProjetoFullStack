@@ -19,5 +19,10 @@ namespace ProjetoFullStack.Util.Notificacoes
         {
             Lista.Add(erro);
         }
+
+        public void LimparNotificacao()
+        {
+            Lista.Clear();
+        }
     }
 }

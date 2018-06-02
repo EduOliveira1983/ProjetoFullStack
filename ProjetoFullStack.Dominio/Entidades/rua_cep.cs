@@ -46,6 +46,25 @@ namespace ProjetoFullStack.Dominio.Entidades
 
         #region Metodos
 
+        public void AlterarCEP(string _cep)
+        {
+            cep = _cep;
+            Falhou(string.IsNullOrEmpty(cep), CEP.CEPInvalido);
+            Falhou(int.TryParse(cep, out int r), CEP.CEPSomenteNumeros);
+        }
+
+        public void AlterarNumeroS(int _numero_inicial, int? _numero_final)
+        {
+            numero_inicial = _numero_inicial;
+            numero_final = _numero_final;
+            Validar();
+        }
+
+        public void AlterarObs(string _obs)
+        {
+            obs = _obs;
+        }
+
         #region Validacao
         public override void Validar()
         {

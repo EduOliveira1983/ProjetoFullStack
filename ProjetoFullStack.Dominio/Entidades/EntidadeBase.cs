@@ -26,6 +26,12 @@ namespace ProjetoFullStack.Dominio.Entidades
         public bool Valido()
         {
             return !Erros.TemCriticos;
+
+        }
+
+        public void Revalidar()
+        {
+            Erros.LimparNotificacao();
         }
 
         #endregion

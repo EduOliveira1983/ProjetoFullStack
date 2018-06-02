@@ -46,6 +46,18 @@ namespace ProjetoFullStack.Dominio.Entidades
 
         #region Metodos
 
+        public void AlterarNome(string _nome)
+        {
+            nome = _nome;
+            ValidarNome(nome);
+        }
+
+        public void AlterarCidade(int _id_cidade)
+        {
+            id_cidade = _id_cidade;
+            Falhou(id_cidade == 0, cidade.IDCidadeInvalido);
+        }
+
         #region Validacao
         public sealed override void Validar()
         {

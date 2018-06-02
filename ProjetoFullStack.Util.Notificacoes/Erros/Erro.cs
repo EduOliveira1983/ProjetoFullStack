@@ -13,6 +13,7 @@ namespace ProjetoFullStack.Util.Notificacoes.Erros
         public bool TemCriticos => Lista.Cast<ErroDescricao>().Any(x => x.Nivel is Critico);
         public bool TemAdvertencias => Lista.Cast<ErroDescricao>().Any(x => x.Nivel is Advertencia);
         public bool TemInformacoes => Lista.Cast<ErroDescricao>().Any(x => x.Nivel is Informacao);
+        
 
     }
 }

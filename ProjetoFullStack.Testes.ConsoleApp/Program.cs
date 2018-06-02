@@ -1,5 +1,6 @@
 ﻿using ProjetoFullStack.Dominio.Entidades;
 using ProjetoFullStack.Dominio.ObjetosValor;
+using ProjetoFullStack.Infra.Data.EF.Repositorios;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,19 +13,37 @@ namespace ProjetoFullStack.Testes.ConsoleApp
     {
         static void Main(string[] args)
         {
-            var objCEP = new CEP("06286060");
-            if (!objCEP.Notificacao.TemCriticos)
-            {
-                var objrua = new rua(1, 1, "Amazonita");
-                var teste = objrua.Valido();
-            }
-            else
-            {
-                var erros = objCEP.Notificacao.Criticos;
-            }
-                
-                
+            var paisrepo = new paisRepositorio();
+            var pais = new pais("WW", "Teste");
             
+            if (pais.Valido())
+                paisrepo.Inserir(pais);
+
+            var retorno = paisrepo.Buscar(x => x.sigla == "WW");
+
+            foreach (pais item in retorno)
+            {                
+                item.AlterarNome("Alterado");
+                item.AlterarSigla(string.Empty);
+                
+                if (item.Valido())                
+                    paisrepo.Alterar(item);
+
+                item.Revalidar();
+                item.AlterarSigla("XJ");
+                if (item.Valido())
+                    paisrepo.Alterar(item);
+            }
+
+            var alterado = paisrepo.Buscar(x => x.sigla == "XJ");
+
+            foreach (var item in alterado)
+            {
+                paisrepo.Excluir(item);
+            }
+
+            var excluidos = paisrepo.Buscar(x => x.sigla == "XJ");
+
         }
     }
 }
