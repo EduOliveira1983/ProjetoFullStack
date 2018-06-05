@@ -24,6 +24,9 @@ namespace ProjetoFullStack.Infra.Data.EF.Data.Map
 
             Property(x => x.data_cadastro)
                 .HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Computed);
+
+            Property(x => x.id_pais).IsRequired();
+            
         }
     }
 }

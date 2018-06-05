@@ -48,8 +48,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\DataContext.cs" />
-    <Compile Include="Data\Map\MapBase.cs" />
+    <Compile Include="Data\Map\bairroMap.cs" />
+    <Compile Include="Data\Map\cidadeMap.cs" />
+    <Compile Include="Data\Map\estadoMap.cs" />
     <Compile Include="Data\Map\paisMap.cs" />
+    <Compile Include="Data\Map\ruaMap.cs" />
+    <Compile Include="Data\Map\rua_cepMap.cs" />
+    <Compile Include="Data\Map\tipo_logradouroMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorios\paisRepositorio.cs" />
     <Compile Include="Repositorios\RepositorioBase.cs" />

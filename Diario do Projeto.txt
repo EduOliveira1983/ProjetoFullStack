@@ -63,3 +63,6 @@ Implementação do Repositório e o EF
 Finalizei os testes na primeira entidde (pais), detectei tbm a necessidade de ter métodos para alterar as propriedades, já que
 os sets são privados...pela pesquisa rápida que fiz, a criação de métodos é a melhor maneira de deixa a classe responsável
 Criei tbm um método para revalidar os erros. Tbm preciso avaliar se isso é a melhor forma de fazer...
+
+01/06
+Retomando o projeto...Implementando as classes do EF para as demais entidades...

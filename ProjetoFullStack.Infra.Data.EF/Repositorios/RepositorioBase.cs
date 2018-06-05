@@ -27,6 +27,11 @@ namespace ProjetoFullStack.Infra.Data.EF.Repositorios
             return DataContext.Set<T>().Where(where).ToList();
         }        
 
+        public IList<T> BuscarComInclude(string include, Expression<Func<T, bool>> where)
+        {
+            return DataContext.Set<T>().Include(include).Where(where).ToList();
+        }
+
         public void Inserir(T obj)
         {
             DataContext.Set<T>().Add(obj);

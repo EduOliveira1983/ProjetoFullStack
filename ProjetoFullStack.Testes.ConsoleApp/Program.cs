@@ -14,6 +14,12 @@ namespace ProjetoFullStack.Testes.ConsoleApp
         static void Main(string[] args)
         {
             var paisrepo = new paisRepositorio();
+
+            var paises = paisrepo.ListarPaisEstados(x => x.sigla == "BR");
+
+            var br = paisrepo.Buscar(x => x.sigla == "BR");
+
+
             var pais = new pais("WW", "Teste");
             
             if (pais.Valido())

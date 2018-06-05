@@ -2,6 +2,8 @@
 using ProjetoFullStack.Util.Notificacoes.Erros.Niveis;
 using ProjetoFullStack.Util.Resources;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace ProjetoFullStack.Dominio.Entidades
 {
@@ -12,6 +14,8 @@ namespace ProjetoFullStack.Dominio.Entidades
         public string sigla { get; private set; }
         public string nome { get; private set; }
         public DateTime data_cadastro { get; private set; }
+        public virtual ICollection<estado> estados { get; private set; }
+
         #endregion
 
         #region Construtor

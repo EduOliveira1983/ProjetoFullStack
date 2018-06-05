@@ -2,6 +2,7 @@
 using ProjetoFullStack.Util.Notificacoes.Erros.Niveis;
 using ProjetoFullStack.Util.Resources;
 using System;
+using System.Collections.Generic;
 
 namespace ProjetoFullStack.Dominio.Entidades
 {
@@ -14,6 +15,8 @@ namespace ProjetoFullStack.Dominio.Entidades
         public string sigla { get; private set; }
         public DateTime data_cadastro { get; private set; }
         public string codigo_ibge { get; private set; }
+        public virtual ICollection<cidade> cidades { get; private set; }
+        
         #endregion
 
         #region Construtor
