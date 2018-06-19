@@ -2,7 +2,6 @@
 using ProjetoFullStack.Util.Notificacoes.Erros.Niveis;
 using ProjetoFullStack.Util.Resources;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace ProjetoFullStack.Dominio.Entidades

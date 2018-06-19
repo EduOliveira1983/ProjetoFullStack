@@ -1,8 +1,8 @@
-﻿using ProjetoFullStack.Dominio.ObjetosValor;
-using ProjetoFullStack.Util.Notificacoes.Erros;
+﻿using ProjetoFullStack.Util.Notificacoes.Erros;
 using ProjetoFullStack.Util.Notificacoes.Erros.Niveis;
 using ProjetoFullStack.Util.Resources;
 using System;
+using System.Collections.Generic;
 
 namespace ProjetoFullStack.Dominio.Entidades
 {
@@ -14,6 +14,7 @@ namespace ProjetoFullStack.Dominio.Entidades
         public int id_tipo_logradouro { get; private set; }
         public string nome { get; private set; }
         public DateTime data_cadastro { get; private set; }
+        public virtual ICollection<rua_cep> ruas_cep { get; private set; }
         #endregion
 
         #region Construtores
