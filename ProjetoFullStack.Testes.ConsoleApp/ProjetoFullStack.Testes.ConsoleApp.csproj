@@ -57,6 +57,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ProjetoFullstack.Aplicacao.Servicos\ProjetoFullstack.Aplicacao.csproj">
+      <Project>{6a41f323-0089-47ad-af82-a3c31b866303}</Project>
+      <Name>ProjetoFullstack.Aplicacao</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ProjetoFullStack.Dominio\ProjetoFullStack.Dominio.csproj">
       <Project>{82727d76-0ad1-4955-9fa3-28663f55c132}</Project>
       <Name>ProjetoFullStack.Dominio</Name>

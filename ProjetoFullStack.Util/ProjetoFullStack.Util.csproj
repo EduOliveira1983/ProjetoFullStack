@@ -40,12 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helper\BytesHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\Mensagens.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Mensagens.resx</DependentUpon>
     </Compile>
+    <Compile Include="Validacoes\ValidacaoEmail.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Mensagens.resx">
@@ -53,5 +55,6 @@
       <LastGenOutput>Mensagens.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -19,6 +19,7 @@ namespace ProjetoFullStack.Infra.Data.EF.Data
         public DbSet<rua> ruas { get; set; }
         public DbSet<rua_cep> rua_ceps { get; set; }
         public DbSet<tipo_logradouro> tipos_logradouro { get; set; }
+        public DbSet<usuario> usuarios { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -33,6 +34,7 @@ namespace ProjetoFullStack.Infra.Data.EF.Data
             modelBuilder.Configurations.Add(new ruaMap());
             modelBuilder.Configurations.Add(new rua_cepMap());
             modelBuilder.Configurations.Add(new tipo_logradouroMap());
+            modelBuilder.Configurations.Add(new usuarioMap());
 
         }
     }

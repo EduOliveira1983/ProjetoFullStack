@@ -33,15 +33,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projeto", "Projeto", "{2845
 		Notas Diversas.txt = Notas Diversas.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoFullStack.Dominio", "ProjetoFullStack.Dominio\ProjetoFullStack.Dominio.csproj", "{82727D76-0AD1-4955-9FA3-28663F55C132}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjetoFullStack.Dominio", "ProjetoFullStack.Dominio\ProjetoFullStack.Dominio.csproj", "{82727D76-0AD1-4955-9FA3-28663F55C132}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoFullStack.Util.Notificacoes", "ProjetoFullStack.Util.Notificacoes\ProjetoFullStack.Util.Notificacoes.csproj", "{377419E2-E031-4AE0-851F-C84CF44FC8AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjetoFullStack.Util.Notificacoes", "ProjetoFullStack.Util.Notificacoes\ProjetoFullStack.Util.Notificacoes.csproj", "{377419E2-E031-4AE0-851F-C84CF44FC8AA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoFullStack.Testes.ConsoleApp", "ProjetoFullStack.Testes.ConsoleApp\ProjetoFullStack.Testes.ConsoleApp.csproj", "{A985D583-4F16-4097-861D-A7E08494A182}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoFullStack.Util", "ProjetoFullStack.Util\ProjetoFullStack.Util.csproj", "{DF601B14-D0B7-46F6-B0A2-DDA8BA17AFE8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoFullStack.Infra.Data.EF", "ProjetoFullStack.Infra.Data.EF\ProjetoFullStack.Infra.Data.EF.csproj", "{224B6A28-09CD-434E-89BC-794A6D1A3E41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoFullstack.Aplicacao", "ProjetoFullstack.Aplicacao.Servicos\ProjetoFullstack.Aplicacao.csproj", "{6A41F323-0089-47AD-AF82-A3C31B866303}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{224B6A28-09CD-434E-89BC-794A6D1A3E41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{224B6A28-09CD-434E-89BC-794A6D1A3E41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{224B6A28-09CD-434E-89BC-794A6D1A3E41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A41F323-0089-47AD-AF82-A3C31B866303}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A41F323-0089-47AD-AF82-A3C31B866303}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A41F323-0089-47AD-AF82-A3C31B866303}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A41F323-0089-47AD-AF82-A3C31B866303}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

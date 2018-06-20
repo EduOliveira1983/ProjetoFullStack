@@ -17,7 +17,7 @@ namespace ProjetoFullStack.Infra.Data.EF.Repositorios
         {
         }
     
-        public IList<T> ListarTodos()
+        public virtual IList<T> ListarTodos()
         {
             return DataContext.Set<T>().ToList();
         }
@@ -32,19 +32,19 @@ namespace ProjetoFullStack.Infra.Data.EF.Repositorios
             return DataContext.Set<T>().Include(include).Where(where).ToList();
         }
 
-        public void Inserir(T obj)
-        {
+        public virtual void Inserir(T obj)
+        {           
             DataContext.Set<T>().Add(obj);
             DataContext.SaveChanges();
         }
 
-        public void Alterar(T obj)
+        public virtual void Alterar(T obj)
         {
             DataContext.Entry(obj).State = EntityState.Modified;
             DataContext.SaveChanges();
         }
 
-        public void Excluir(T obj)
+        public virtual void Excluir(T obj)
         {
             DataContext.Set<T>().Remove(obj);
             DataContext.SaveChanges();

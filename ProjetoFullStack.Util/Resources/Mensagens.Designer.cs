@@ -257,5 +257,50 @@ namespace ProjetoFullStack.Util.Resources {
                 return ResourceManager.GetString("Erro_SiglaTipoLogradouroInvalida", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email Inválido.
+        /// </summary>
+        public static string Erro_UsuarioEmailInvalido {
+            get {
+                return ResourceManager.GetString("Erro_UsuarioEmailInvalido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Usuário Inativo.
+        /// </summary>
+        public static string Erro_UsuarioInativo {
+            get {
+                return ResourceManager.GetString("Erro_UsuarioInativo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Usuário Não Encontrado.
+        /// </summary>
+        public static string Erro_UsuarioNaoEncontrado {
+            get {
+                return ResourceManager.GetString("Erro_UsuarioNaoEncontrado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Senha Inválida.
+        /// </summary>
+        public static string Erro_UsuarioSenhaInvalida {
+            get {
+                return ResourceManager.GetString("Erro_UsuarioSenhaInvalida", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to As senhas são diferentes.
+        /// </summary>
+        public static string Erro_UsuarioSenhasDiferentes {
+            get {
+                return ResourceManager.GetString("Erro_UsuarioSenhasDiferentes", resourceCulture);
+            }
+        }
     }
 }

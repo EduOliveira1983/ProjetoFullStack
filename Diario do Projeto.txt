@@ -69,3 +69,7 @@ Retomando o projeto...Implementando as classes do EF para as demais entidades...
 
 04/06
 Implementei o EF e aprendi a trazer os dados dos relacionamentos.
+
+19/06
+Retomando o projeto...Implementação da Classe de Usuarios...Senha com Hash e criação da camada de aplicação
+

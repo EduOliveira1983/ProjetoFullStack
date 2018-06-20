@@ -183,4 +183,19 @@
   <data name="Erro_SiglaTipoLogradouroInvalida" xml:space="preserve">
     <value>A Sigla do Tipo de Logradouro é inválida</value>
   </data>
+  <data name="Erro_UsuarioEmailInvalido" xml:space="preserve">
+    <value>Email Inválido</value>
+  </data>
+  <data name="Erro_UsuarioInativo" xml:space="preserve">
+    <value>Usuário Inativo</value>
+  </data>
+  <data name="Erro_UsuarioNaoEncontrado" xml:space="preserve">
+    <value>Usuário Não Encontrado</value>
+  </data>
+  <data name="Erro_UsuarioSenhaInvalida" xml:space="preserve">
+    <value>Senha Inválida</value>
+  </data>
+  <data name="Erro_UsuarioSenhasDiferentes" xml:space="preserve">
+    <value>As senhas são diferentes</value>
+  </data>
 </root>
