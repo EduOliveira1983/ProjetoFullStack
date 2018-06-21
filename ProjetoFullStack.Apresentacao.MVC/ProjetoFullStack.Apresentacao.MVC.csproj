@@ -46,6 +46,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -212,6 +218,24 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProjetoFullstack.Aplicacao.Servicos\ProjetoFullstack.Aplicacao.csproj">
+      <Project>{6a41f323-0089-47ad-af82-a3c31b866303}</Project>
+      <Name>ProjetoFullstack.Aplicacao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjetoFullStack.Dominio\ProjetoFullStack.Dominio.csproj">
+      <Project>{82727d76-0ad1-4955-9fa3-28663f55c132}</Project>
+      <Name>ProjetoFullStack.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjetoFullStack.Infra.Data.EF\ProjetoFullStack.Infra.Data.EF.csproj">
+      <Project>{224b6a28-09cd-434e-89bc-794a6d1a3e41}</Project>
+      <Name>ProjetoFullStack.Infra.Data.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjetoFullStack.Startup\ProjetoFullStack.Startup.csproj">
+      <Project>{c0ecbcc4-480e-4cda-b639-273a60c48e05}</Project>
+      <Name>ProjetoFullStack.Startup</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
