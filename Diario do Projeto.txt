@@ -73,3 +73,6 @@ Implementei o EF e aprendi a trazer os dados dos relacionamentos.
 19/06
 Retomando o projeto...Implementação da Classe de Usuarios...Senha com Hash e criação da camada de aplicação
 
+20/06
+Preparando o projeto pra o DIP
+

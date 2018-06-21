@@ -1,5 +1,5 @@
 ﻿using ProjetoFullStack.Dominio.Entidades;
-using ProjetoFullStack.Dominio.Interfaces.Entidades;
+using ProjetoFullStack.Dominio.Interfaces.Repositorio;
 using ProjetoFullStack.Infra.Data.EF.Data;
 using System;
 using System.Collections.Generic;
@@ -27,7 +27,7 @@ namespace ProjetoFullStack.Infra.Data.EF.Repositorios
             return DataContext.Set<T>().Where(where).ToList();
         }        
 
-        public IList<T> BuscarComInclude(string include, Expression<Func<T, bool>> where)
+        public IList<T> Buscar(string include, Expression<Func<T, bool>> where)
         {
             return DataContext.Set<T>().Include(include).Where(where).ToList();
         }

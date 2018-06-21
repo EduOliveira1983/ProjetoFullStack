@@ -45,6 +45,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoFullStack.Infra.Data
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoFullstack.Aplicacao", "ProjetoFullstack.Aplicacao.Servicos\ProjetoFullstack.Aplicacao.csproj", "{6A41F323-0089-47AD-AF82-A3C31B866303}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoFullStack.Startup", "ProjetoFullStack.Startup\ProjetoFullStack.Startup.csproj", "{C0ECBCC4-480E-4CDA-B639-273A60C48E05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoFullStack.Apresentacao.MVC", "ProjetoFullStack.Apresentacao.MVC\ProjetoFullStack.Apresentacao.MVC.csproj", "{7526FBC8-F457-4E2A-8C28-74082B8A6742}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +79,14 @@ Global
 		{6A41F323-0089-47AD-AF82-A3C31B866303}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A41F323-0089-47AD-AF82-A3C31B866303}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A41F323-0089-47AD-AF82-A3C31B866303}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0ECBCC4-480E-4CDA-B639-273A60C48E05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0ECBCC4-480E-4CDA-B639-273A60C48E05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0ECBCC4-480E-4CDA-B639-273A60C48E05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0ECBCC4-480E-4CDA-B639-273A60C48E05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7526FBC8-F457-4E2A-8C28-74082B8A6742}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7526FBC8-F457-4E2A-8C28-74082B8A6742}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7526FBC8-F457-4E2A-8C28-74082B8A6742}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7526FBC8-F457-4E2A-8C28-74082B8A6742}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

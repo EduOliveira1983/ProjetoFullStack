@@ -16,7 +16,7 @@ namespace ProjetoFullStack.Infra.Data.EF.Repositorios
 
         public List<pais> ListarPaisEstados(Expression<Func<pais, bool>> where)
         {
-            return BuscarComInclude("estados.cidades.bairros.ruas.ruas_cep", where).ToList();
+            return Buscar("estados.cidades.bairros.ruas.ruas_cep", where).ToList();
         }
         
     }

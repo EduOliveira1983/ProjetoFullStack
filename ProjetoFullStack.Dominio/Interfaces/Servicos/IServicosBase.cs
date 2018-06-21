@@ -8,6 +8,7 @@ namespace ProjetoFullStack.Dominio.Interfaces.Servicos
     public interface IServicosBase<T> : IDisposable where T : class
     {
         IList<T> Buscar(Expression<Func<T, bool>> where);
+        IList<T> Buscar(string include, Expression<Func<T, bool>> where);
         IList<T> ListarTodos();
         void Inserir(T obj);
         void Alterar(T obj);

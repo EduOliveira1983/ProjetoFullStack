@@ -17,7 +17,7 @@ namespace ProjetoFullStack.Testes.ConsoleApp
         static void Main(string[] args)
         {
             var usuServ = new UsuarioServicos();
-            var retorno = usuServ.Logar("eduardooliveira_jr@hotmail.com", "Testes");
+            var retorno = usuServ.Logar("eduardooliveira_jr@hotmail.com", "Teste1");
         }
     }
 }
