@@ -14,10 +14,13 @@ namespace ProjetoFullStack.Testes.ConsoleApp
 {
     class Program
     {
-        static void Main(string[] args)
+
+        public static void Main(string[] args)
         {
-            var usuServ = new UsuarioServicos();
-            var retorno = usuServ.Logar("eduardooliveira_jr@hotmail.com", "Teste1");
+            
         }
+
+
+       
     }
 }

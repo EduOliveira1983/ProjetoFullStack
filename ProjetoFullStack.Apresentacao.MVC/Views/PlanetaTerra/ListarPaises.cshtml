@@ -1,0 +1,34 @@
+﻿@model IEnumerable<ProjetoFullStack.Apresentacao.MVC.Models.PlanetaTerra.PlanetaTerraViewModel>
+
+<ul class="navbar-primary-menu">
+    @foreach (var item in Model)
+    {
+        <li style="align-self: baseline">
+            @*@Html.HiddenFor(modelItem => item.id_Pais)*@
+            <a href="#" class="padrao" id="linkpais" data-value=@item.id_Pais>@Html.DisplayFor(modelItem => item.Nome)</a>
+            <span class="badge" style="float: right;">@Html.DisplayFor(modelItem => item.Qtde_Cidades)</span>
+        </li>
+    }
+</ul>
+
+<script src="/Scripts/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".padrao").on("click", function () {
+            var val = $(this).attr('data-value');
+            $.ajax({
+                url: "/PlanetaTerra/ListarCidades",
+                type: "GET",
+                data: { id_pais: val }
+            })
+                .done(function (partialViewResult) {
+                    $("#div_cidades").html(partialViewResult);
+                });
+        });
+    });
+</script>
+
+
+
+
+

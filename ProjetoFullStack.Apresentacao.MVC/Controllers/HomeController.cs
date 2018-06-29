@@ -24,7 +24,7 @@ namespace ProjetoFullStack.Apresentacao.MVC.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
-            return View();
+            return PartialView();
         }
     }
 }

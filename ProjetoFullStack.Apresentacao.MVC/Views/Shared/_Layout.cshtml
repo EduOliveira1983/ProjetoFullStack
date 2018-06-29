@@ -22,15 +22,20 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home", "1", new { @class = "btn btn-default btnDetalhes" })</li>
-                    <li><a href="#" class="btn btn-default btnDetalhes">Contact</a></li>
+                    <li>@Html.ActionLink("Usuario", "Index", "Usuario")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home", "1", new { @id = "contato" })</li>
+                    <li>@Html.ActionLink("Paises", "Index", "PlanetaTerra")</li>
                 </ul>
             </div>
         </div>
     </div>
+
     <div class="container body-content">
         @RenderBody()
         <hr />
+        <div class="alert alert-danger" id="alerta" style="display:none;">
+            <strong>Error!</strong> Looks like the passwords you entered don't match!
+        </div>
         <footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
@@ -47,24 +52,45 @@
 
 
     @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/bootstrap")    
     @RenderSection("scripts", required: false)
-    
-        <script type="text/javascript">
 
-            $(document).ready(function () {
+    @{
+        var message = TempData["successmessage"] ?? string.Empty;
+    }
 
-                $.ajaxSetup({ cache: false });
+    <script type="text/javascript">
 
-                $(".btnDetalhes").click(function (e) {   
-                    e.preventDefault();
-                    $("#teste").load("/Home/Contact/", function () {
-                        $('#myModal').modal("show");
-                    });
+        $(document).ready(function () {
+
+            $.ajaxSetup({ cache: false });
+
+            $("#contato").click(function (e) {
+                e.preventDefault();
+                $("#teste").load("/Home/Contact/", function () {
+                    $('#myModal').modal("show");
                 });
             });
+            $("#contatos").click(function (e) {
+                e.preventDefault();
+                $("#teste").load("/Home/Contact/", function () {
+                    $('#myModal').modal("show");
+                });
+            });
+            $(".alterarsenha").click(function (e) {
+                e.preventDefault();
+                var id = $(this).data("value");
+                $("#teste").load("/Usuario/AlterarSenha/" + id, function () {
+                    $('#myModal').modal("show");
+                });
+            });
+        });
 
-        </script>
-    
+        var message = '@message';
+        if (message) {
+            alert(message);
+        }
+
+    </script>
 </body>
 </html>

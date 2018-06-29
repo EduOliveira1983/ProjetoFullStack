@@ -1,0 +1,29 @@
+﻿@model IEnumerable<ProjetoFullStack.Apresentacao.MVC.Models.PlanetaTerra.PlanetaTerraViewModel>
+
+@{
+    ViewBag.Title = "Index";
+    var lstCidades = (List<ProjetoFullStack.Apresentacao.MVC.Models.PlanetaTerra.Cidades>)ViewBag.Cidades;
+
+}
+
+<h2>Index</h2>
+<nav class="navbar-primary" id="div_paises">
+    @Html.Partial("ListarPaises", Model)
+</nav>
+<div class="main-content" id="div_cidades">
+    @Html.Partial("ListarCidades", lstCidades)
+</div>
+@section Scripts {
+    <script>        
+        window.setInterval(carregarPaises, 10000);
+        function carregarPaises() {            
+            $.ajax({
+                url: "/PlanetaTerra/ListarPaises",
+                type: "GET"
+            })
+                .done(function (partialViewResult) {
+                    $("#div_paises").html(partialViewResult);
+                });
+        }
+    </script>
+}

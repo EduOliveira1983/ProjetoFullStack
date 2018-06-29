@@ -1,0 +1,41 @@
+﻿@model IEnumerable<ProjetoFullStack.Apresentacao.MVC.Models.PlanetaTerra.Cidades>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.id_Cidade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id_Pais)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PontoTuristico)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_Cidade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_Pais)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PontoTuristico)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
