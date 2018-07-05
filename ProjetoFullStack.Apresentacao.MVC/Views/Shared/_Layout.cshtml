@@ -63,6 +63,16 @@
 
         $(document).ready(function () {
 
+            $('.table').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'copyHtml5',
+                    'excelHtml5',
+                    'csvHtml5',
+                    'pdfHtml5'
+                ]
+            });
+
             $.ajaxSetup({ cache: false });
 
             $("#contato").click(function (e) {
@@ -89,8 +99,9 @@
         var message = '@message';
         if (message) {
             alert(message);
-        }
+        };
 
+        
     </script>
 </body>
 </html>
