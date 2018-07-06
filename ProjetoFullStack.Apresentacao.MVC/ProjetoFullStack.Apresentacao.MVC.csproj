@@ -265,14 +265,6 @@
       <Project>{224b6a28-09cd-434e-89bc-794a6d1a3e41}</Project>
       <Name>ProjetoFullStack.Infra.Data.EF</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ProjetoFullStack.Startup\ProjetoFullStack.Startup.csproj">
-      <Project>{c0ecbcc4-480e-4cda-b639-273a60c48e05}</Project>
-      <Name>ProjetoFullStack.Startup</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ProjetoFullStack.Util.Notificacoes\ProjetoFullStack.Util.Notificacoes.csproj">
-      <Project>{377419e2-e031-4ae0-851f-c84cf44fc8aa}</Project>
-      <Name>ProjetoFullStack.Util.Notificacoes</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ProjetoFullStack.Util\ProjetoFullStack.Util.csproj">
       <Project>{df601b14-d0b7-46f6-b0a2-dda8ba17afe8}</Project>
       <Name>ProjetoFullStack.Util</Name>

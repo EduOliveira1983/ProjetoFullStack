@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9FED544A-088C-4D7F-A2C1-9912D215910F}</ProjectGuid>
+    <ProjectGuid>{8C73FB71-8D26-44D5-AC80-8A7B0A6F0BAA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ProjetoFullStack.Dominios</RootNamespace>
-    <AssemblyName>ProjetoFullStack.Dominios</AssemblyName>
+    <RootNamespace>ProjetoFullStack.Notificacao</RootNamespace>
+    <AssemblyName>ProjetoFullStack.Notificacao</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,30 +30,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Entidades\bairro.cs" />
-    <Compile Include="Entidades\cidade.cs" />
-    <Compile Include="Entidades\EntidadeBase.cs" />
-    <Compile Include="Entidades\estado.cs" />
-    <Compile Include="Entidades\pais.cs" />
-    <Compile Include="Entidades\rua.cs" />
-    <Compile Include="Entidades\rua_cep.cs" />
-    <Compile Include="Entidades\tipo_logradouro.cs" />
-    <Compile Include="Entidades\usuario.cs" />
-    <Compile Include="Interfaces\Repositorio\IRepositorioBase.cs" />
-    <Compile Include="Interfaces\Servicos\IServicosBase.cs" />
-    <Compile Include="ObjetosValor\CEP.cs" />
-    <Compile Include="ObjetosValor\ObjetoValorBase.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ProjetoFullStack.Notificacao\ProjetoFullStack.Notificacoes.csproj">
-      <Project>{8c73fb71-8d26-44d5-ac80-8a7b0a6f0baa}</Project>
-      <Name>ProjetoFullStack.Notificacoes</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ProjetoFullStack.Util\ProjetoFullStack.Util.csproj">
-      <Project>{DF601B14-D0B7-46F6-B0A2-DDA8BA17AFE8}</Project>
-      <Name>ProjetoFullStack.Util</Name>
-    </ProjectReference>
+    <Compile Include="Descricao.cs" />
+    <Compile Include="Erros\Erro.cs" />
+    <Compile Include="Erros\ErroDescricao.cs" />
+    <Compile Include="Erros\Niveis\Advertencia.cs" />
+    <Compile Include="Erros\Niveis\Critico.cs" />
+    <Compile Include="Erros\Niveis\Informacao.cs" />
+    <Compile Include="Erros\Niveis\NivelBase.cs" />
+    <Compile Include="Interfaces\Erros\INivel.cs" />
+    <Compile Include="Interfaces\IDescricao.cs" />
+    <Compile Include="Interfaces\INotificacao.cs" />
+    <Compile Include="Notificacao.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
