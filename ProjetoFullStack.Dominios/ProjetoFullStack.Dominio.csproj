@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A985D583-4F16-4097-861D-A7E08494A182}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>ProjetoFullStack.Testes.ConsoleApp</RootNamespace>
-    <AssemblyName>ProjetoFullStack.Testes.ConsoleApp</AssemblyName>
+    <ProjectGuid>{9FED544A-088C-4D7F-A2C1-9912D215910F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjetoFullStack.Dominios</RootNamespace>
+    <AssemblyName>ProjetoFullStack.Dominios</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -32,21 +30,29 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Entidades\bairro.cs" />
+    <Compile Include="Entidades\cidade.cs" />
+    <Compile Include="Entidades\EntidadeBase.cs" />
+    <Compile Include="Entidades\estado.cs" />
+    <Compile Include="Entidades\pais.cs" />
+    <Compile Include="Entidades\rua.cs" />
+    <Compile Include="Entidades\rua_cep.cs" />
+    <Compile Include="Entidades\tipo_logradouro.cs" />
+    <Compile Include="Entidades\usuario.cs" />
+    <Compile Include="Interfaces\Repositorio\IRepositorioBase.cs" />
+    <Compile Include="Interfaces\Servicos\IServicosBase.cs" />
+    <Compile Include="ObjetosValor\CEP.cs" />
+    <Compile Include="ObjetosValor\ObjetoValorBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ProjetoFullStack.Dominios\ProjetoFullStack.Dominio.csproj">
-      <Project>{9fed544a-088c-4d7f-a2c1-9912d215910f}</Project>
-      <Name>ProjetoFullStack.Dominio</Name>
+    <ProjectReference Include="..\ProjetoFullStack.Util.Notificacoes\ProjetoFullStack.Util.Notificacoes.csproj">
+      <Project>{377419E2-E031-4AE0-851F-C84CF44FC8AA}</Project>
+      <Name>ProjetoFullStack.Util.Notificacoes</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ProjetoFullStack.Infra.Data.EF\ProjetoFullStack.Infra.Data.EF.csproj">
-      <Project>{224b6a28-09cd-434e-89bc-794a6d1a3e41}</Project>
-      <Name>ProjetoFullStack.Infra.Data.EF</Name>
+    <ProjectReference Include="..\ProjetoFullStack.Util\ProjetoFullStack.Util.csproj">
+      <Project>{DF601B14-D0B7-46F6-B0A2-DDA8BA17AFE8}</Project>
+      <Name>ProjetoFullStack.Util</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -257,8 +257,8 @@
       <Project>{6a41f323-0089-47ad-af82-a3c31b866303}</Project>
       <Name>ProjetoFullstack.Aplicacao</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ProjetoFullStack.Dominio\ProjetoFullStack.Dominio.csproj">
-      <Project>{82727d76-0ad1-4955-9fa3-28663f55c132}</Project>
+    <ProjectReference Include="..\ProjetoFullStack.Dominios\ProjetoFullStack.Dominio.csproj">
+      <Project>{9fed544a-088c-4d7f-a2c1-9912d215910f}</Project>
       <Name>ProjetoFullStack.Dominio</Name>
     </ProjectReference>
     <ProjectReference Include="..\ProjetoFullStack.Infra.Data.EF\ProjetoFullStack.Infra.Data.EF.csproj">
@@ -268,6 +268,14 @@
     <ProjectReference Include="..\ProjetoFullStack.Startup\ProjetoFullStack.Startup.csproj">
       <Project>{c0ecbcc4-480e-4cda-b639-273a60c48e05}</Project>
       <Name>ProjetoFullStack.Startup</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjetoFullStack.Util.Notificacoes\ProjetoFullStack.Util.Notificacoes.csproj">
+      <Project>{377419e2-e031-4ae0-851f-c84cf44fc8aa}</Project>
+      <Name>ProjetoFullStack.Util.Notificacoes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjetoFullStack.Util\ProjetoFullStack.Util.csproj">
+      <Project>{df601b14-d0b7-46f6-b0a2-dda8ba17afe8}</Project>
+      <Name>ProjetoFullStack.Util</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
